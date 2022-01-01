@@ -52,9 +52,26 @@ setInterval(function()
 	var h = date.getHours();          //获取小时   
 	var m = date.getMinutes();        //获取分钟   
 	var s = date.getSeconds();        //获取秒   
+	var hist = '';
+	
+	/* 2022 *//****/
+	if (mon==1){
+		if (da==1)hist='元旦';
+		if (da==5)hist='小寒';
+		if (da==20)hist='大寒';
+		if (da==31)hist='除夕';
+	};
+	if (mon==2){
+		if (da==1)hist='春节';
+		if (da==4)hist='立春';
+		if (da==14)hist='苏修日';
+		if (da==15)hist='元宵节';
+		if (da==19)hist='雨水';
+	};
+	/****/
 	
 	var d = document.getElementById('time_card');    
-	d.innerHTML='<center><hr><font size=160px>'+padding(h,2)+':'+padding(m,2)+':'+padding(s,2)+'</font><br><font>'+year+'年'+mon+'月'+da+'日 星期'+day_s+'<hr><br>'+season+'<br>'+season_g+'</center><br>';  
+	d.innerHTML='<center><hr><font size=160px>'+padding(h,2)+':'+padding(m,2)+':'+padding(s,2)+'</font><br><font>'+year+'年'+mon+'月'+da+'日 星期'+day_s+'<hr><br>'+season+'<br>'+season_g+'<br>'+hist+'</center><br>';  
 
 	var bl_j = document.getElementById('bl');    
 	bl_j.innerHTML='<aside id="aside" style="width:' +((60*60*h+60*m+s)/86400*500)+'px;"></aside>'
