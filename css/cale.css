@@ -18,23 +18,10 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-.container {
+.cale {
 	width: 60%;
-	margin: 5% auto 0;
+	margin: 5px auto 0;
 	background-color: #d0ffff;
 	padding: 2% 5%;
 	border-radius: 20px
-}
-#bl {
-	width: 500px;
-	height: 10px;
-	position: relative;
-	border-radius: 13px;
-	border: 2px solid;
-	margin: 0 auto;
-}
-aside{
-	height: 10px;
-	border-radius: 13px;
-	background: rgba(0,200,255,0.75);
 }
