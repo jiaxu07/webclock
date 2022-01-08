@@ -55,7 +55,7 @@ setInterval(function()
 	var hist = '';
 	
 	var d = document.getElementById('time_card');    
-	d.innerHTML='<center><hr><font size=160px>'+padding(h,2)+':'+padding(m,2)+':'+padding(s,2)+'</font><br><font>'+year+'年'+mon+'月'+da+'日 星期'+day_s+'<hr><br>'+season+'<br>'+season_g+'<br>';  
+	d.innerHTML='<center><font size=160px>'+padding(h,2)+':'+padding(m,2)+':'+padding(s,2)+'</font><br><font>'+year+'年'+mon+'月'+da+'日 星期'+day_s+'<hr><br>'+season+'<br>'+season_g+'<br>';  
 
 	var bl_j = document.getElementById('bl');    
 	bl_j.innerHTML='<aside id="aside" style="width:' +((60*60*h+60*m+s)/86400*500)+'px;"></aside>'

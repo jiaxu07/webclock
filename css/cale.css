@@ -19,9 +19,14 @@
 */
 
 .cale {
-	width: 60%;
+	width: 90%;
 	margin: 5px auto 0;
 	background-color: #d0ffff;
 	padding: 2% 5%;
 	border-radius: 20px
+}
+
+.cale_0 {
+	width: 90%;
+	padding: 2% 5%;
 }

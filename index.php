@@ -23,23 +23,32 @@
 <!doctype html>
 <html>
 <head>
+	<?php
+		$dir = '.';		// if do not want to use, input '.'
+		$hide_title = false;
+		$hide_bgcolor = false;
+	?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Webclock</title>
-    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
-    <script src="js/webclock.js" type="text/javascript"></script>
-    <script src="js/cale.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
-    <link rel="stylesheet" href="css/cale.css" type="text/css"/>
+    <script src="<?php echo $dir;?>/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="<?php echo $dir;?>/js/webclock.js" type="text/javascript"></script>
+    <script src="<?php echo $dir;?>/js/cale.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php echo $dir;?>/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo $dir;?>/css/cale.css" type="text/css"/>
 </head> 
 <body>
-    <div class="container">
-        <center><h1>Web Clock</h1></center>
+<?php
+    if ($hide_bgcolor) echo '<div class="webclock_maincard_0">';
+    else echo '<div class="webclock_maincard">';
+	if (!$hide_title)
+		echo '<center><h1>Web Clock</h1></center><hr>';
+		?>
         <div id="time_card"></div>
         <div id="bl"></div>
         <div id='bl_p'></div>
 		<center>
-            <iframe style="padding: 0;" width="800" height="150" src="https://i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1&py=shinan" frameborder="0"></iframe>
+            <iframe style="padding: 0;background-color: #cccccc;border-radius: 20px" width="800" height="150" src="https://i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1&py=shinan" frameborder="0"></iframe>
 		</center>
     </div>
 <?php
@@ -64,8 +73,11 @@
     
     $w = getdate(mktime(0,0,0,$mon,1,$year))["wday"];
     
+    if ($hide_bgcolor) echo '<div class="cale_0">';
+    else echo '<div class="cale">';
+	
     $date = function($day,$w,$year,$mon){
-        echo "<div class=cale><center><b>".$year."年".$mon."月</b><table>";
+        echo "<center><b>".$year."年".$mon."月</b><table>";
         echo "<tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>";
         $arr = array();
         for($i=1;$i<=$day;$i++){

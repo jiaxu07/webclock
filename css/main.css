@@ -18,12 +18,16 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-.container {
-	width: 60%;
+.webclock_maincard {
+	width: 90%;
 	margin: 5% auto 0;
 	background-color: #d0ffff;
 	padding: 2% 5%;
 	border-radius: 20px
+}
+.webclock_maincard_0 {
+	width: 90%;
+	padding: 2% 5%;
 }
 #bl {
 	width: 500px;
