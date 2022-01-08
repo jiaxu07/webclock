@@ -38,6 +38,9 @@
         <div id="time_card"></div>
         <div id="bl"></div>
         <div id='bl_p'></div>
+		<center>
+            <iframe style="padding: 0;" width="800" height="150" src="https://i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1&py=shinan" frameborder="0"></iframe>
+		</center>
     </div>
 <?php
 	date_default_timezone_set("PRC");
@@ -62,7 +65,7 @@
     $w = getdate(mktime(0,0,0,$mon,1,$year))["wday"];
     
     $date = function($day,$w,$year,$mon){
-        echo "<div class=\"cale\"><center><b>".$year."年".$mon."月</b><table border='0.5'>";
+        echo "<div class=cale><center><b>".$year."年".$mon."月</b><table>";
         echo "<tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>";
         $arr = array();
         for($i=1;$i<=$day;$i++){
