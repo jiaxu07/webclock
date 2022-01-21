@@ -32,6 +32,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Webclock</title>
     <script src="<?php echo $dir;?>/js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="<?php echo $dir;?>/js/solarterms.js" type="text/javascript"></script>
     <script src="<?php echo $dir;?>/js/webclock.js" type="text/javascript"></script>
     <script src="<?php echo $dir;?>/js/cale.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo $dir;?>/css/main.css" type="text/css"/>
